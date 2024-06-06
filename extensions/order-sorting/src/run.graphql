@@ -1,0 +1,11 @@
+query RunInput {
+  paymentMethods {
+    id
+    name
+  }
+  paymentCustomization {
+    metafield(namespace: "$app:order-sorting", key: "function-configuration") {
+      value
+    }
+  }
+}

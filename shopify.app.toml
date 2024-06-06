@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "258ea4e4d89b1c94cb353aa52e49f92f"
+name = "payment-customization-app"
+handle = "payment-customization-app-13"
+application_url = "https://step-patches-undo-encourage.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "custom-checkout-extensibility.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_payment_customizations,write_products"
+
+[auth]
+redirect_urls = [
+  "https://step-patches-undo-encourage.trycloudflare.com/auth/callback",
+  "https://step-patches-undo-encourage.trycloudflare.com/auth/shopify/callback",
+  "https://step-patches-undo-encourage.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
